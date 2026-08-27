@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mapetit Lusaniya — Food, Juices &amp; Event Catering</title>
+  <meta
+    name="description"
+    content="Mapetit Lusaniya offers freshly prepared food, natural juices and full event catering for weddings, birthdays, corporate events and more."
+  />
+  <meta name="theme-color" content="#ea580c" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mapetit Lusaniya — Food, Juices & Event Catering" />
+  <meta
+    property="og:description"
+    content="Freshly prepared food, natural juices and full event catering for every occasion."
+  />
+  <meta
+    property="og:image"
+    content="https://images.pexels.com/photos/28736727/pexels-photo-28736727.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mapetit Lusaniya — Food, Juices & Event Catering" />
+  <meta
+    name="twitter:description"
+    content="Freshly prepared food, natural juices and full event catering for every occasion."
+  />
+  <meta
+    name="twitter:image"
+    content="https://images.pexels.com/photos/28736727/pexels-photo-28736727.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="navbar">
+    <nav class="navbar__inner">
+      <button class="navbar__logo" data-scroll-to="#home" aria-label="Mapetit Lusaniya home">
+        <span class="navbar__logo-icon"><i class="fa-solid fa-utensils"></i></span>
+        <span class="navbar__logo-text">
+          <span class="navbar__logo-name">Mapetit Lusaniya</span>
+          <span class="navbar__logo-tagline">Food, Juices &amp; Event Catering</span>
+        </span>
+      </button>
+
+      <div class="navbar__links" id="navbarLinks"></div>
+
+      <div class="navbar__actions">
+        <button class="navbar__cart-btn" id="cartToggleBtn" aria-label="Open cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="navbar__cart-badge" id="cartBadge" hidden>0</span>
+        </button>
+        <button class="btn btn--whatsapp navbar__whatsapp-btn" id="navWhatsappBtn">
+          WhatsApp
+        </button>
+        <button class="navbar__menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="navbar__mobile" id="navbarMobile" hidden>
+      <div class="navbar__mobile-backdrop" id="navbarMobileBackdrop"></div>
+      <div class="navbar__mobile-panel">
+        <div class="navbar__mobile-links" id="navbarMobileLinks"></div>
+        <button class="btn btn--whatsapp navbar__mobile-whatsapp" id="mobileWhatsappBtn">
+          Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero__bg">
+        <img src="https://images.pexels.com/photos/28736727/pexels-photo-28736727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Chef serving traditional dishes at an elegant buffet" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="hero__content reveal">
+        <div class="hero__inner">
+          <span class="hero__eyebrow">Food · Juices · Event Catering</span>
+          <h1 class="hero__title">
+            Delicious Food. Beautiful Events.
+            <span class="hero__title-accent">Unforgettable Moments.</span>
+          </h1>
+          <p class="hero__subtitle">
+            From freshly prepared meals and natural juices to full event
+            catering — Mapetit Lusaniya brings flavour and warmth to every
+            occasion.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" data-scroll-to="#menu">
+              Explore Our Menu <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn btn--ghost-light" data-scroll-to="#catering">
+              <i class="fa-solid fa-calendar-days"></i> Plan Your Event
+            </button>
+            <button class="btn btn--whatsapp" id="heroWhatsappBtn">
+              <i class="fa-solid fa-message"></i> Order on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <div class="hero__scroll-pill"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED CATEGORIES ============ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">What We Offer</span>
+          <h2 class="section-title">Browse by Category</h2>
+          <p class="section-subtitle">From everyday meals to full event catering — explore everything Mapetit has to offer.</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PRODUCTS ============ -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section-heading-row">
+          <div class="section-heading section-heading--left reveal">
+            <span class="eyebrow">Customer Favourites</span>
+            <h2 class="section-title">Featured on the Menu</h2>
+            <p class="section-subtitle">Explore some of our customer favorites — and discover even more delicious options on our full menu below.</p>
+          </div>
+          <button class="btn btn--secondary" data-scroll-to="#menu">
+            View Full Menu <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="product-grid" id="featuredProductsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ CATERING CTA ============ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-banner__bg">
+            <img src="images\lusaniya 1.jpg" alt="Elegant wedding reception table setup" loading="lazy" />
+            <div class="cta-banner__scrim"></div>
+          </div>
+          <div class="cta-banner__content">
+            <span class="cta-banner__eyebrow">Event Catering</span>
+            <h2 class="cta-banner__title">Planning an Event? Let Us Handle the Food.</h2>
+            <p class="cta-banner__text">
+              Weddings, birthdays, corporate events and more — we provide
+              delicious food, fresh juices and full setup so you can focus on
+              enjoying your day.
+            </p>
+            <div class="cta-banner__actions">
+              <button class="btn btn--primary" data-scroll-to="#catering">
+                Explore Catering <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn--ghost-light" data-scroll-to="#enquiry">
+                <i class="fa-solid fa-calendar-days"></i> Request a Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section id="menu" class="section section--white">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Our Menu</span>
+          <h2 class="section-title">Browse &amp; Order</h2>
+          <p class="section-subtitle">Explore our featured dishes and discover even more delicious choices on our full menu.</p>
+        </div>
+
+        <div class="menu-controls">
+          <div class="menu-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" id="menuSearchInput" placeholder="Search for food, juice, snacks..." aria-label="Search products" />
+          </div>
+          <div class="menu-sort">
+            <i class="fa-solid fa-sliders"></i>
+            <select id="menuSortSelect" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="menu-categories no-scrollbar" id="menuCategoryChips"></div>
+
+        <div id="menuResults"></div>
+      </div>
+    </section>
+
+    <!-- ============ CATERING ============ -->
+    <section id="catering" class="section section--tint">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Event Catering</span>
+          <h2 class="section-title">Planning an Event? Let Us Handle the Food.</h2>
+          <p class="section-subtitle">Full catering services for weddings, birthdays, corporate events and more — tailored to your needs.</p>
+        </div>
+
+        <div class="event-types">
+          <div class="section-heading reveal" style="margin-top:3.5rem;">
+            <span class="eyebrow">Events We Cater</span>
+            <h2 class="section-title">For Every Occasion</h2>
+            <p class="section-subtitle">Whatever you're celebrating, we bring the food, drinks and setup.</p>
+          </div>
+          <div class="event-types-grid" id="eventTypesGrid"></div>
+          <div class="event-types__cta">
+            <button class="btn btn--primary" data-scroll-to="#enquiry">
+              Request a Quote <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="packages">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Catering Packages</span>
+            <h2 class="section-title">Choose a Package</h2>
+            <p class="section-subtitle">Discover our carefully crafted packages, designed to make every meal special.</p>
+          </div>
+          <div class="packages-grid" id="packagesGrid"></div>
+        </div>
+
+        <div class="enquiry-wrap">
+          <div id="enquiry" class="enquiry-anchor"></div>
+          <div class="section-heading reveal">
+            <span class="eyebrow">Enquiry Form</span>
+            <h2 class="section-title">Request a Quote</h2>
+            <p class="section-subtitle">Fill in the details below and we'll send your request straight to WhatsApp — no payment needed.</p>
+          </div>
+
+          <form class="enquiry-form" id="enquiryForm">
+            <div class="enquiry-form__grid">
+              <div class="field">
+                <label for="eqName"><i class="fa-solid fa-user"></i> Your Name</label>
+                <input type="text" id="eqName" class="input-field" placeholder="Jane Doe" required />
+              </div>
+              <div class="field">
+                <label for="eqPhone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                <input type="tel" id="eqPhone" class="input-field" placeholder="+256 700 000 000" required />
+              </div>
+              <div class="field">
+                <label for="eqEventType">Event Type</label>
+                <select id="eqEventType" class="input-field" required>
+                  <option value="">Select event type</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="eqEventDate"><i class="fa-solid fa-calendar-days"></i> Event Date</label>
+                <input type="date" id="eqEventDate" class="input-field" />
+              </div>
+              <div class="field">
+                <label for="eqGuests"><i class="fa-solid fa-users"></i> Number of Guests</label>
+                <input type="number" min="1" id="eqGuests" class="input-field" placeholder="50" />
+              </div>
+              <div class="field">
+                <label for="eqLocation"><i class="fa-solid fa-location-dot"></i> Event Location</label>
+                <input type="text" id="eqLocation" class="input-field" placeholder="Kampala" />
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <label>Services Required</label>
+              <div class="chip-toggle-group" id="serviceChips"></div>
+            </div>
+
+            <div class="field field--full">
+              <label for="eqNotes">Additional Requirements</label>
+              <textarea id="eqNotes" class="input-field" rows="3" placeholder="Tell us more about your event..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--whatsapp enquiry-form__submit">
+              <i class="fa-solid fa-paper-plane"></i> Request a Quote on WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="section section--white">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Gallery</span>
+          <h2 class="section-title">A Taste of What We Do</h2>
+          <p class="section-subtitle">A glimpse of our food, drinks and event setups. Real photos will replace these soon.</p>
+        </div>
+
+        <div class="gallery-filters" id="galleryFilters"></div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section section--tint">
+      <div class="container">
+        <div class="about-grid reveal">
+          <div class="about-image-wrap">
+            <div class="about-image">
+              <img src="images\CEO.jpeg" alt="Chef serving a variety of colorful dishes at a buffet" loading="lazy" />
+            </div>
+            <div class="about-badge">
+              <p class="about-badge__num">CEO</p>
+              <p class="about-badge__label">MRS MARIAM</p>
+            </div>
+          </div>
+          <div class="about-text">
+            <div class="section-heading section-heading--left">
+              <span class="eyebrow">About Us</span>
+              <h2 class="section-title">About Mapetit Lusaniya</h2>
+            </div>
+            <p class="about-text__p">
+              Welcome to Mapetit Lusaniya, where great food, convenience, and a memorable dining experience come together.
+
+We are passionate about bringing delicious meals and quality service closer to our customers. Whether you're ordering for yourself, sharing a meal with family, or enjoying food with friends, Mapetit Lusaniya is here to make every order simple and enjoyable.
+
+Explore our menu, choose your favorites, and enjoy Mapetit Lusaniya.
+            </p>
+            <ul class="about-highlights">
+              <li><i class="fa-solid fa-circle-check"></i> Freshly prepared food</li>
+              <li><i class="fa-solid fa-circle-check"></i> Natural fruit juices</li>
+              <li><i class="fa-solid fa-circle-check"></i> Full event catering</li>
+              <li><i class="fa-solid fa-circle-check"></i> Customisable packages</li>
+            </ul>
+            <button class="btn btn--primary" data-scroll-to="#contact">
+              Get in Touch <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section--tint">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Get in Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">Have a question or want to place an order? Reach out — we'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <h3 class="card-title">Reach Us</h3>
+            <ul class="contact-rows" id="contactRows"></ul>
+            <div class="contact-socials">
+              <p class="contact-socials__label">Follow Us</p>
+              <div class="contact-socials__icons" id="contactSocials"></div>
+            </div>
+          </div>
+
+          <div class="card contact-card">
+            <h3 class="card-title">Opening Hours</h3>
+            <ul class="contact-hours" id="contactHours"></ul>
+            <p class="contact-hours__note">Availability Time</p>
+          </div>
+
+          <div class="card contact-cta-card">
+            <div>
+              <div class="contact-cta-card__icon"><i class="fa-solid fa-message"></i></div>
+              <h3 class="card-title card-title--light">Order or Enquire on WhatsApp</h3>
+              <p class="contact-cta-card__text">The fastest way to reach us. Send your order or catering request and we'll get back to you.</p>
+            </div>
+            <button class="contact-cta-card__btn" id="contactWhatsappBtn">
+              <i class="fa-solid fa-message"></i> Start Chatting
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-icon"><i class="fa-solid fa-utensils"></i></span>
+            <span class="footer__logo-name">Mapetit Lusaniya</span>
+          </div>
+          <p class="footer__desc">Freshly prepared food, natural juices and full event catering for every occasion.</p>
+          <button class="btn btn--whatsapp footer__whatsapp-btn" id="footerWhatsappBtn">Chat with us</button>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Explore</h3>
+          <ul class="footer__links" id="footerLinks"></ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Contact</h3>
+          <ul class="footer__contact" id="footerContact"></ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Opening Hours</h3>
+          <ul class="footer__hours" id="footerHours"></ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="footerYear"></span> Mapetit Lusaniya. All rights reserved. · <span class="footer__bottom-note">Developed By Aklon</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Your order">
+    <div class="cart-drawer__header">
+      <div class="cart-drawer__title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h2>Your Order</h2>
+        <span class="cart-drawer__count" id="cartDrawerCount" hidden>0</span>
+      </div>
+      <button class="icon-btn" id="cartCloseBtn" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-drawer__body" id="cartDrawerBody"></div>
+  </aside>
+
+  <!-- ============ PRODUCT DETAILS MODAL ============ -->
+  <div class="modal-backdrop" id="productModalBackdrop"></div>
+  <div class="product-modal" id="productModal">
+    <div class="product-modal__panel" id="productModalPanel"></div>
+  </div>
+
+  <!-- ============ GALLERY LIGHTBOX ============ -->
+  <div class="lightbox" id="galleryLightbox">
+    <button class="icon-btn icon-btn--light lightbox__close" id="lightboxClose" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- ============ FLOATING WHATSAPP ============ -->
+  <button class="floating-whatsapp" id="floatingWhatsapp" aria-label="Chat with us on WhatsApp">
+    <i class="fa-solid fa-message"></i>
+    <span class="floating-whatsapp__ping"></span>
+  </button>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
